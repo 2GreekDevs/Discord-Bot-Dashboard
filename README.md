@@ -90,3 +90,13 @@ node app.js
 
     🔐 Admin panel with access control
 
+---
+
+🤝 About Us
+
+2GreekDevs is a Greek tech duo building creative digital tools, websites, Discord bots, and more.
+Follow us for updates:
+[📸 Instagram](https://www.instagram.com/2greekdevs/)
+[🌐 Website](2greekdevs.com)
+[💬 Discord Server](https://discord.gg/dHCvUaFAAH)
+
