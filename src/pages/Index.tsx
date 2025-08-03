@@ -8,6 +8,11 @@ import { CommandManagement } from "@/components/command-management"
 import { ActivityLogs } from "@/components/activity-logs"
 import { AnalyticsCharts } from "@/components/analytics-charts"
 import { BotStatus } from "@/components/bot-status"
+import { UserManagement } from "@/components/user-management"
+import { AutomationRules } from "@/components/automation-rules"
+import { EconomySystem } from "@/components/economy-system"
+import { TicketSystem } from "@/components/ticket-system"
+import { BackupIntegrations } from "@/components/backup-integrations"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 interface User {
@@ -42,11 +47,15 @@ const Index = () => {
         </div>
 
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className="grid w-full grid-cols-9 max-w-4xl">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="commands">Commands</TabsTrigger>
+            <TabsTrigger value="users">Users</TabsTrigger>
+            <TabsTrigger value="automation">Automation</TabsTrigger>
+            <TabsTrigger value="economy">Economy</TabsTrigger>
+            <TabsTrigger value="tickets">Tickets</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
-            <TabsTrigger value="logs">Activity</TabsTrigger>
+            <TabsTrigger value="backup">Backup</TabsTrigger>
             <TabsTrigger value="status">Status</TabsTrigger>
           </TabsList>
           
@@ -62,8 +71,28 @@ const Index = () => {
             <CommandManagement />
           </TabsContent>
           
+          <TabsContent value="users" className="space-y-6">
+            <UserManagement />
+          </TabsContent>
+          
+          <TabsContent value="automation" className="space-y-6">
+            <AutomationRules />
+          </TabsContent>
+          
+          <TabsContent value="economy" className="space-y-6">
+            <EconomySystem />
+          </TabsContent>
+          
+          <TabsContent value="tickets" className="space-y-6">
+            <TicketSystem />
+          </TabsContent>
+          
           <TabsContent value="analytics" className="space-y-6">
             <AnalyticsCharts />
+          </TabsContent>
+          
+          <TabsContent value="backup" className="space-y-6">
+            <BackupIntegrations />
           </TabsContent>
           
           <TabsContent value="logs" className="space-y-6">
