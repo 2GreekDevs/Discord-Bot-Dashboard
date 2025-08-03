@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# 🛠️ Discord Bot Dashboard
 
-## Project info
+A simple, customizable **Discord Bot Dashboard** built with Node.js and Express, designed to manage your bot’s servers, commands, and features from a web interface.
 
-**URL**: https://lovable.dev/projects/4d1840e9-7cc9-42f8-97ba-aa01f0b56a9b
+Created by [2GreekDevs](https://github.com/2GreekDevs) — for developers who want quick control over their bots without diving into raw code every time.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- 🔐 Secure login via Discord OAuth2
+- 📊 Dashboard overview for servers the bot is in
+- ⚙️ Per-server settings panel
+- 📤 Command toggling (enable/disable features)
+- 🌐 Fully customizable with your bot’s config
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4d1840e9-7cc9-42f8-97ba-aa01f0b56a9b) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Tech Stack
 
-**Use your preferred IDE**
+- Node.js
+- React
+- TailwindCSS
+- OAuth2 authentication
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🖥️ Demo Preview
 
-Follow these steps:
+> [Coming Soon – Optional live demo or screenshots]
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧰 Requirements
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Node.js v16+
+- A Discord bot already created
+- A Discord Developer Portal application (for OAuth2)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+---
+
+## 🔧 Setup Instructions
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/2GreekDevs/Discord-Bot-Dashboard.git
+cd Discord-Bot-Dashboard
 ```
 
-**Edit a file directly in GitHub**
+ 2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```npm install```
 
-**Use GitHub Codespaces**
+3. Configure the environment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Create a .env file or use config.js to set up:
 
-## What technologies are used for this project?
+```bash
+CLIENT_ID=your_discord_app_id
+CLIENT_SECRET=your_discord_app_secret
+BOT_TOKEN=your_discord_bot_token
+REDIRECT_URI=http://localhost:3000/callback
+SESSION_SECRET=some_secure_string
+PORT=3000
+```
+4. Start the server
 
-This project is built with:
+```bash
+node app.js
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+    Visit http://localhost:3000 in your browser to test the dashboard.
+```
 
-## How can I deploy this project?
+🔒 Security Notes
 
-Simply open [Lovable](https://lovable.dev/projects/4d1840e9-7cc9-42f8-97ba-aa01f0b56a9b) and click on Share -> Publish.
+    Always keep your CLIENT_SECRET and BOT_TOKEN private.
 
-## Can I connect a custom domain to my Lovable project?
+    Use SESSION_SECRET for encrypted sessions.
 
-Yes, you can!
+    Set proper permissions in your Discord application (OAuth scopes).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+📌 To Do / Improvements
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+    🔧 Add logging per server
+
+    🎨 Theme customization support
+
+    📡 WebSocket live status updates
+
+    🔐 Admin panel with access control
+
